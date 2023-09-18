@@ -5,6 +5,7 @@ from flask_restful import Api, Resource
 from flask_jwt import JWT, jwt_required, current_identity
 import logging
 from flask_cors import CORS
+import os
 import flask_http_middleware
 import datetime
 
@@ -77,6 +78,11 @@ api_wp.add_resource(resumee,'/resumee/<int:year>') #GET devuelve los eventos de 
 api_wp.add_resource(education,'/education/<int:year>') #GET devuelve los eventos de formación del año solicitado
 
 #Lanzamiento del programa (en servidor local/en servidor remoto), se deja comentada la que no se use
-#if __name__ == '__main__':
+# if __name__ == '__main__':
 #    server.run(debug=True)
+
+# if __name__ == "__main__":
+#    port = int(os.environ.get("PORT", 5200))
+#    server.run(host = '0.0.0.0', port = port, debug = True)
+
 application = server

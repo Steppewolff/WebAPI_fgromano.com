@@ -8,7 +8,7 @@ class WpApiDb():
     #Conexion a la BBDD del servidor mySQL
     def connect(self):
         self.db = pymysql.connect(
-            host = 'fgromano.com',
+            host = 'fgromano.com', #'127.0.0.1', #
             port = 3306,
             user = 'fgromano_admin',
             passwd= '0_Castorp_0',
